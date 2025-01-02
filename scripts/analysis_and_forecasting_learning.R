@@ -51,8 +51,6 @@ plot(prophet_model, prophet_forecast)
 
 prophet_forecast
 
-#creating a new forcast to try 
-
 
 actual <- tail(prophet_data$y, forecast_periods)
 
@@ -66,3 +64,4 @@ calculate_forecast_metrics <- function(actual, predicted) {
   return(data.frame(RMSE = rmse, MAE = mae, MAPE = mape))
 }
 calculate_forecast_metrics(actual, predicted)
+
